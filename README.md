@@ -134,4 +134,4 @@ Each backend and frontend should have its own folder:
 ---
 ## **Author**
 **Koshala Kavikeshwera**  
-[GitHub Profile](https://github.com/yourprofile)
+[GitHub Profile](https://github.com/kavikeshwera)
