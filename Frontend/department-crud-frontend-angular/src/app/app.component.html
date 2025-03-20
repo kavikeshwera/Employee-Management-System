@@ -1,0 +1,11 @@
+<div class="container mx-auto p-5">
+  <app-department-list #departmentList (editDepartment)="editDepartment($event)" (createDepartment)="openCreateModal()"
+    (refresh)="refreshAfterDelete()"> <!-- ✅ Ensure table refreshes after delete -->
+  </app-department-list>
+
+  <app-modal *ngIf="isModalOpen" (onClose)="closeModal()">
+    <app-department-form [department]="selectedDepartment || { name: '', location: '' }" (refresh)="refreshDepartment()"
+      (close)="closeModal()">
+    </app-department-form>
+  </app-modal>
+</div>

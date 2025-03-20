@@ -1,0 +1,8 @@
+<div class="container mx-auto p-5">
+  <app-employee-list (editEmployee)="editEmployee($event)" (createEmployee)="openCreateModal()"></app-employee-list>
+
+  <app-modal *ngIf="isModalOpen" (onClose)="closeModal()">
+    <app-employee-form [employee]="selectedEmployee" (refresh)="refreshEmployees()"
+      (close)="closeModal()"></app-employee-form>
+  </app-modal>
+</div>

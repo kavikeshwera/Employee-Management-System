@@ -1,0 +1,17 @@
+<div class="p-5 w-[400px] bg-white rounded-lg shadow-lg">
+    <h2 class="text-xl font-semibold text-center mb-4">
+        {{ department.id ? 'Edit Department' : 'Create Department' }}
+    </h2>
+
+    <input type="text" [(ngModel)]="department.name" placeholder="Name" class="w-full p-3 border rounded mb-3"
+        required />
+    <input type="text" [(ngModel)]="department.location" placeholder="Location" class="w-full p-3 border rounded mb-3"
+        required />
+
+    <button class="w-full p-3 text-white bg-blue-500 rounded hover:bg-blue-600" (click)="saveDepartment()">
+        <span class="text-white font-bold">
+            {{ department.id ? 'Update' : 'Create' }}
+        </span>
+    </button>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="p-5">
+    <h2 class="text-xl font-semibold text-center">
+        {{ employee.id ? 'Edit Employee' : 'Create Employee' }}
+    </h2>
+    <input type="text" [(ngModel)]="employee.name" placeholder="Name" class="w-full p-2 border rounded" required />
+    <input type="email" [(ngModel)]="employee.email" placeholder="Email" class="w-full p-2 border rounded" required />
+    <input type="text" [(ngModel)]="employee.department" placeholder="Department" class="w-full p-2 border rounded"
+        required />
+    <input type="number" [(ngModel)]="employee.salary" placeholder="Salary" class="w-full p-2 border rounded"
+        required />
+
+    <button class="w-full p-2 text-white bg-blue-500 rounded hover:bg-blue-600" (click)="saveEmployee()">
+        {{ employee.id ? 'Update' : 'Create' }}
+    </button>
+</div>
